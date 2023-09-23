@@ -7,20 +7,19 @@ public class Pallidrume {
 	public static void main(String[] args) {
 		String wortIN;
 		
-		do {
+		do {// so bald die eine riechtige Eingabe eingegeben wurde, wird dieses schleiffe beenden!!
 			
+			// String wird von STDIN eingelesen
+		   Scanner input = new Scanner(System.in);
+		   System.out.print("Geben Sie bitte eine Wort ein: ");
+		   wortIN = input.nextLine();
 		
-		// hier wird eine Pallidrum Wort geprüft
-		Scanner input = new Scanner(System.in);
-		System.out.print("Geben Sie bitte eine Wort ein: ");
-		 wortIN = input.nextLine();
-		
-	    try {
+	    try {// veruch zu eine String Eingabe ansonst Error
 	            if (!isString(wortIN)) {
 	                throw new IllegalArgumentException("Die Eingabe ist keine Wort.");
 	                
 	            }
-	            // Hier können Sie Ihre pallidrume-Funktion aufrufen
+	            // wird geprüft, ob pallidrume ist 
 	            pallidrume(wortIN);
 	        } catch (IllegalArgumentException e) {
 	            System.err.println(e.getMessage());
@@ -28,13 +27,13 @@ public class Pallidrume {
 	    }while(!isString(wortIN)); 
 			
 	}
-	
+	 //  überprüft die Methode "isString", ob der übergebene Text nur aus Buchstaben besteht und gibt true zurück, wenn dies der Fall ist, andernfalls false.
 	public static boolean isString(String text) {
         return text.matches("[a-zA-Z]+"); // Überprüfen, ob der Text nur aus Buchstaben besteht
     }
 
 
-
+    // String wird als eine char Array gespeischert
 	public static void pallidrume (String str) {
 		   
 		   char[] ch = new char[str.length()];
@@ -51,7 +50,7 @@ public class Pallidrume {
 		 	   
 	}
 	
-	
+	// Char Array wird reversiert und in eine andere char Array gescpeichert
 	public static char[] reversedCharArray(char[] original){
 		 int length = original.length;
 	        char[] reversed = new char[length];
