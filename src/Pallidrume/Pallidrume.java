@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Pallidrume {
 	
+/********************************************************************************************************************************************
+/********************************************************************************************************************************************	
+	
  public static void main(String[] args) {
    String wortIN;
 		
@@ -24,13 +27,17 @@ public class Pallidrume {
     }while(!isString(wortIN)); 
 			
  }
-
+	
+/********************************************************************************************************************************************
+/********************************************************************************************************************************************	
 	
   //überprüft die Methode "isString", ob der übergebene Text nur aus Buchstaben besteht und gibt true zurück, wenn dies der Fall ist, andernfalls false.
  public static boolean isString(String text) {
         return text.matches("[a-zA-Z]+"); // Überprüfen, ob der Text nur aus Buchstaben besteht
  }
 
+/********************************************************************************************************************************************
+/********************************************************************************************************************************************	
 	
   //String wird als eine char Array gespeischert
   public static void pallidrume (String str) {
@@ -47,6 +54,8 @@ public class Pallidrume {
 	 
    }
 
+/********************************************************************************************************************************************
+/********************************************************************************************************************************************	
 	
   //Char Array wird reversiert und in eine andere char Array gescpeichert
    public static char[] reversedCharArray(char[] original){
